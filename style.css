@@ -1,3 +1,161 @@
+/* ================== Base Elements ================== */
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+ min-height: 100%;
+ font-size: 14px;
+ display: grid;
+ grid-template-areas:
+    'nav'
+    'main'
+    'footer';
+ grid-template-rows: 200px;
+ font-family: 'Roboto', sans-serif;
+ color: #3a3a3a;
+ line-height: 1.6;
+ /* margin: 0; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  justify-self: center;
+  align-items: center;
+}
+
+header,
+main,
+footer {
+  /* border: 2px solid green; */
+  margin: 5px;
+  text-align: center;
+}
+
+ul {
+  /* border: 1px solid red; */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #f1f1f1;
+  padding: 10px 20px 10px 20px;
+  margin: 30px;
+}
+
+.search-bar {
+  background-image: url('micro.png') url('search.png');
+  background-repeat: no-repeat;
+  background-position: 95% 3%;
+  background-size: 16px 20px;
+
+  width: 550px;
+  border-radius: 25px;
+  height: 50px;
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px 0;
+  padding: 20px;
+}
+
+.search-bar:hover {
+  box-shadow: 0px 0px 6px 1px rgba(189, 189, 189, 1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+}
+
+.button-container input {
+  margin: 0 10px;
+  padding: 0 1rem;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(219, 219, 219, 0.3);
+  border: 1px solid rgba(219, 219, 219, 0.3);
+}
+
+.button-container input:hover {
+  color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(219, 219, 219, 0.3);
+  border: 1px solid rgba(194, 192, 192);
+}
+
+/* ================== Base Layout Styles ================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-right-list,
+.top-left-list {
+  display: flex;
+  align-items: center;
+}
+
+.top-left-list li,
+.top-right-list li {
+  margin: 20px 20px 0px 0px;
+}
+
+.top-right-list li input {
+  border: 0;
+  border-radius: 3px;
+  width: 75px;
+  height: 30px;
+  color: white;
+  background-color: rgba(67, 134, 250);
+}
+
+.top-right-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.top-right-list li a:hover,
+.footer-left li a:hover,
+.footer-right li a:hover{
+  text-decoration: underline;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(219, 219, 219, 0.5);
+  background-color: rgba(219, 219, 219, 0.3);
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.footer-left li {
+  padding: 12px 0 10px 30px;
+}
+
+.footer-right li {
+  padding: 12px 30px 10px 0;
 }
