@@ -1,161 +1,122 @@
-/* ================== Base Elements ================== */
 * {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
+body {
+  marging-top: 200px;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
 }
 
-body {
- min-height: 100%;
- font-size: 14px;
- display: grid;
- grid-template-areas:
-    'nav'
-    'main'
-    'footer';
- grid-template-rows: 200px;
- font-family: 'Roboto', sans-serif;
- color: #3a3a3a;
- line-height: 1.6;
- /* margin: 0; */
+.main-container {
+  position: fixed;
+  left: 37%;
+  top: 37%;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+}
+
+header a {
+  color: #000;
+  opacity: 0.75;
+  padding-left: 15px;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  grid-area: main;
-  justify-self: center;
-  align-items: center;
+  width: 500px;
+  margin: 0 auto;
 }
 
-header,
-main,
+main button {
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px 20px;
+  color: #5f6368;
+  font-size: 14px;
+  margin: 11px 24px;
+}
+
+main button:hover {
+  box-shadow: 0 0 2px black;
+}
+
+button {
+  line-height: 28px;
+  cursor: pointer;
+}
+
 footer {
-  /* border: 2px solid green; */
-  margin: 5px;
-  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 12px;
 }
 
-ul {
-  /* border: 1px solid red; */
-  list-style: none;
-  margin: 0;
-  padding: 0;
+footer a {
+  color: #5f6368;
+  padding-left: 25px;
+}
+
+.search-buttons {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.right button {
+  margin-left: 20px;
+  border: 1px solid #4285f4;
+  font-weight: bold;
+  color: white;
+  width: 75px;
+  height: 30px;
+  background-color: rgb(67, 134, 250);
+  border-radius: 3px;
 }
 
 a {
   text-decoration: none;
 }
 
-button {
-  background-color: #f1f1f1;
-  padding: 10px 20px 10px 20px;
-  margin: 30px;
-}
-
-.search-bar {
-  background-image: url('micro.png') url('search.png');
-  background-repeat: no-repeat;
-  background-position: 95% 3%;
-  background-size: 16px 20px;
-
-  width: 550px;
-  border-radius: 25px;
-  height: 50px;
-  border: 2px solid #f1f1f1;
-  margin-bottom: 25px 0;
-  padding: 20px;
-}
-
-.search-bar:hover {
-  box-shadow: 0px 0px 6px 1px rgba(189, 189, 189, 1);
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    height: 36px;
-}
-
-.button-container input {
-  margin: 0 10px;
-  padding: 0 1rem;
-  border-radius: 5px;
-  color: rgba(0, 0, 0, 0.6);
-  background-color: rgba(219, 219, 219, 0.3);
-  border: 1px solid rgba(219, 219, 219, 0.3);
-}
-
-.button-container input:hover {
-  color: rgba(255, 0, 0, 0.8);
-  background-color: rgba(219, 219, 219, 0.3);
-  border: 1px solid rgba(194, 192, 192);
-}
-
-/* ================== Base Layout Styles ================== */
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.top-right-list,
-.top-left-list {
-  display: flex;
-  align-items: center;
-}
-
-.top-left-list li,
-.top-right-list li {
-  margin: 20px 20px 0px 0px;
-}
-
-.top-right-list li input {
-  border: 0;
-  border-radius: 3px;
-  width: 75px;
-  height: 30px;
-  color: white;
-  background-color: rgba(67, 134, 250);
-}
-
-.top-right-list li a {
-  text-decoration: none;
-  color: black;
-}
-
-.top-right-list li a:hover,
-.footer-left li a:hover,
-.footer-right li a:hover{
+a:hover {
   text-decoration: underline;
 }
 
-footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
+.right {
+  float: right;
+  padding: 10px 25px 20px 0px;
 }
 
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid rgba(219, 219, 219, 0.5);
-  background-color: rgba(219, 219, 219, 0.3);
+.left {
+  float: left;
+  padding: 10px 25px 20px 0px;
 }
 
-.footer-left,
-.footer-right {
-  display: flex;
-  justify-content: space-evenly;
+#logo {
+  margin: 0 auto;
+  display: block;
 }
 
-
-.footer-left li {
-  padding: 12px 0 10px 30px;
-}
-
-.footer-right li {
-  padding: 12px 30px 10px 0;
+#search-bar {
+  background-image: url('Imgs/micro.png'), url('Imgs/search.png');
+  background-repeat: no-repeat;
+  background-position: 95%, 3%;
+  background-size: 16px, 20px;
+  width: 482px;
+  height: 44px;
+  border-radius: 24px;
+  margin: 20px 0;
+  box-shadow: 0 0 2px #888;
+  padding-left: 20px;
+  font-size: 16px;
 }
